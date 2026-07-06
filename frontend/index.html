@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Cooking Companion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      window.addEventListener('error', function(event) {
+        const div = document.createElement('div');
+        div.style.position = 'fixed';
+        div.style.top = '0';
+        div.style.left = '0';
+        div.style.width = '100vw';
+        div.style.height = '100vh';
+        div.style.backgroundColor = '#fee2e2';
+        div.style.color = '#991b1b';
+        div.style.padding = '24px';
+        div.style.fontFamily = 'monospace';
+        div.style.whiteSpace = 'pre-wrap';
+        div.style.zIndex = '999999';
+        div.innerHTML = '<h1>Runtime Error</h1>' + 
+                        '<p><strong>Message:</strong> ' + event.message + '</p>' +
+                        '<p><strong>Filename:</strong> ' + event.filename + '</p>' +
+                        '<p><strong>Line:</strong> ' + event.lineno + ':' + event.colno + '</p>' +
+                        '<pre>' + (event.error ? event.error.stack : '') + '</pre>';
+        document.body.appendChild(div);
+      });
+      window.addEventListener('unhandledrejection', function(event) {
+        const div = document.createElement('div');
+        div.style.position = 'fixed';
+        div.style.top = '0';
+        div.style.left = '0';
+        div.style.width = '100vw';
+        div.style.height = '100vh';
+        div.style.backgroundColor = '#fee2e2';
+        div.style.color = '#991b1b';
+        div.style.padding = '24px';
+        div.style.fontFamily = 'monospace';
+        div.style.whiteSpace = 'pre-wrap';
+        div.style.zIndex = '999999';
+        div.innerHTML = '<h1>Unhandled Rejection</h1>' + 
+                        '<p><strong>Reason:</strong> ' + event.reason + '</p>';
+        document.body.appendChild(div);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
