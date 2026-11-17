@@ -1,6 +1,6 @@
 # CookPal - AI Cooking Companion
 
-CookPal is a modern, full-stack application designed to be your ultimate kitchen assistant. Powered by Gemini AI, CookPal generates personalized recipes, suggests custom daily family meal plans with comprehensive nutrition breakdowns, and pulls video/blog resources from YouTube and Spoonacular.
+CookPal is full-stack application developed for all the moms, dads and bachelors who wonder what to cook everyday with the minimal ingredients they have.Powered by Gemini AI, CookPal generates personalized recipes, suggests custom daily family meal plans with comprehensive nutrition breakdowns, and pulls video/blog resources from YouTube and Spoonacular.
 
 ---
 
